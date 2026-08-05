@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios de Arquitectura y Construcción en Nogales, Sonora | Corporativo 1102</title>
+<meta name="description" content="Arquitectura, construcción, remodelación, exteriores y consultoría en Nogales, Sonora. Pasto sintético, cerco de malla ciclónica, terrazas y más.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#121210;
+    --ink-2:#1c1b18;
+    --paper:#f7f4ee;
+    --paper-2:#eeeae0;
+    --gold:#e8ab1f;
+    --gold-light:#ffc94d;
+    --line:#e3ded2;
+    --line-dark:#3a372f;
+    --text-soft:#6b665c;
+    --text-soft-dark:#a8a296;
+    --radius:2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Work Sans', sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Poppins', sans-serif;
+    font-weight:900;
+    letter-spacing:-0.01em;
+    text-transform:uppercase;
+    line-height:1.05;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+
+  /* corner bracket signature — echoes the 1102 logo mark */
+  .bracket{position:relative;}
+  .bracket::before, .bracket::after{
+    content:"";
+    position:absolute;
+    width:22px; height:22px;
+    border:2.5px solid var(--gold);
+    z-index:2;
+  }
+  .bracket::before{top:-2px; left:-2px; border-right:none; border-bottom:none;}
+  .bracket::after{bottom:-2px; right:-2px; border-left:none; border-top:none;}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(18,18,16,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line-dark);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 0;
+  }
+  .logo-mark{
+    display:flex; align-items:center; gap:10px;
+    color:var(--paper);
+    cursor:pointer;
+  }
+  .logo-box{
+    width:38px; height:38px;
+    background:var(--ink);
+    border:1.5px solid var(--gold);
+    display:grid; grid-template-columns:1fr 1fr;
+    font-family:'Poppins',sans-serif; font-weight:600; font-size:13px;
+    color:var(--paper);
+  }
+  .logo-box span{display:flex; align-items:center; justify-content:center;}
+  .logo-text{font-family:'Poppins',sans-serif; font-weight:700; font-size:15px; letter-spacing:0.06em; text-transform:uppercase;}
+  .logo-text small{display:block; font-family:'Work Sans',sans-serif; font-weight:400; font-size:10px; letter-spacing:0.18em; color:var(--gold-light); text-transform:uppercase;}
+  nav ul{list-style:none; display:flex; gap:32px;}
+  nav ul li a{
+    font-size:13px; letter-spacing:0.06em; text-transform:uppercase;
+    color:var(--text-soft-dark); font-weight:500;
+    transition:color .2s;
+  }
+  nav ul li a:hover{color:var(--gold-light);}
+  .btn-gold{
+    background:var(--gold);
+    color:var(--ink);
+    padding:11px 22px;
+    font-size:13px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase;
+    border-radius:var(--radius);
+    display:inline-flex; align-items:center; gap:8px;
+    transition:background .2s;
+  }
+  .btn-gold:hover{background:var(--gold-light);}
+  .nav-cta{display:flex; align-items:center; gap:28px;}
+  .nav-check{display:none;}
+  .nav-toggle{display:none; flex-direction:column; justify-content:center; gap:5px; width:34px; height:34px; background:none; border:none; cursor:pointer; padding:6px;}
+  .nav-toggle span{display:block; width:100%; height:2px; background:var(--paper); pointer-events:none;}
+
+  @media (max-width:860px){
+    header{position:sticky;}
+    #siteNav{
+      position:absolute; top:100%; left:0; right:0;
+      background:var(--ink-2); border-bottom:1px solid var(--line-dark);
+      max-height:0; overflow:hidden; transition:max-height .25s ease;
+    }
+    .nav-check:checked ~ #siteNav{max-height:320px;}
+    #siteNav ul{flex-direction:column; gap:0; padding:8px 0;}
+    #siteNav ul li{width:100%;}
+    #siteNav ul li a{display:block; padding:14px 32px;}
+    .nav-cta{display:none;}
+    .nav-toggle{display:flex;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      linear-gradient(160deg, rgba(18,18,16,0.88) 10%, rgba(18,18,16,0.55) 55%, rgba(18,18,16,0.85) 100%),
+      repeating-linear-gradient(45deg, #23221e 0 2px, #1a1917 2px 46px);
+    background-size: cover, 60px 60px;
+    color:var(--paper);
+    padding:120px 0 100px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-eyebrow{
+    color:var(--gold-light); font-size:13px; letter-spacing:0.22em; text-transform:uppercase;
+    font-weight:600; margin-bottom:22px; display:flex; align-items:center; gap:12px;
+  }
+  .hero-eyebrow::before{content:""; width:34px; height:1.5px; background:var(--gold);}
+  .hero h1{font-size:clamp(38px,5.4vw,70px); max-width:820px; color:var(--paper);}
+  .hero h1 em{font-style:normal; color:var(--gold-light);}
+  .hero p{
+    font-size:18px; color:var(--text-soft-dark); max-width:520px;
+    margin:26px 0 40px; line-height:1.6;
+  }
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap;}
+  .btn-outline{
+    border:1.5px solid var(--line-dark); color:var(--paper);
+    padding:11px 24px; font-size:13px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;
+    border-radius:var(--radius);
+  }
+  .hero-stats{
+    display:flex; gap:0; margin-top:70px; padding-top:32px;
+    border-top:1px solid var(--line-dark); max-width:760px; flex-wrap:wrap;
+  }
+  .stat{flex:1; min-width:150px; padding-right:24px;}
+  .stat .num{font-family:'Poppins',sans-serif; font-weight:900; font-size:34px; color:var(--gold-light);}
+  .stat .lbl{font-size:12.5px; color:var(--text-soft-dark); letter-spacing:0.03em; margin-top:4px;}
+
+  /* ---------- TRUST BAR ---------- */
+  .trust{background:var(--ink-2); border-bottom:1px solid var(--line-dark); padding:26px 0;}
+  .trust-inner{display:flex; align-items:center; gap:40px; overflow-x:auto;}
+  .trust-label{
+    font-size:11.5px; color:var(--text-soft-dark); text-transform:uppercase; letter-spacing:0.14em;
+    white-space:nowrap; flex-shrink:0; padding-right:24px; border-right:1px solid var(--line-dark);
+  }
+  .trust-logos{display:flex; gap:38px; align-items:center; flex-wrap:nowrap;}
+  .trust-logos img{height:20px; width:auto; filter:brightness(0) invert(1); opacity:0.55;}
+  .trust-word{
+    font-family:'Poppins',sans-serif; font-weight:700; font-size:14px; letter-spacing:0.03em;
+    color:var(--text-soft-dark); white-space:nowrap;
+  }
+
+  /* ---------- SECTION SHARED ---------- */
+  section{padding:100px 0;}
+  .sec-label{
+    display:flex; align-items:center; gap:12px; margin-bottom:18px;
+    font-size:13px; letter-spacing:0.2em; text-transform:uppercase; font-weight:600; color:var(--gold);
+  }
+  .sec-label::before{content:""; width:26px; height:1.5px; background:var(--gold);}
+  .sec-head{display:flex; justify-content:space-between; align-items:flex-end; gap:40px; margin-bottom:56px; flex-wrap:wrap;}
+  .sec-head h2{font-size:clamp(28px,3.4vw,42px); max-width:600px;}
+  .sec-head p{color:var(--text-soft); font-size:15.5px; max-width:340px; line-height:1.6;}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--paper);}
+  .service-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1px;
+    background:var(--line); border:1px solid var(--line);
+  }
+  .service-card{background:var(--paper); padding:36px 30px; transition:background .25s;}
+  .service-card:hover{background:var(--ink); color:var(--paper);}
+  .service-card:hover .service-tag, .service-card:hover .service-desc{color:var(--text-soft-dark);}
+  .service-card:hover h3{color:var(--paper);}
+  .service-tag{font-size:12px; color:var(--gold); letter-spacing:0.1em; text-transform:uppercase; font-weight:700;}
+  .service-card h3{font-size:19px; margin:14px 0 12px; text-transform:none; letter-spacing:0; font-weight:700;}
+  .service-desc{font-size:14px; color:var(--text-soft); line-height:1.6;}
+
+  /* ---------- PROJECTS ---------- */
+  .projects{background:var(--ink); color:var(--paper);}
+  .projects .sec-head p{color:var(--text-soft-dark);}
+  .project-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:24px;}
+  .project-grid .proj:first-child{grid-row:span 2;}
+  .proj{position:relative; overflow:hidden; min-height:260px;}
+  .proj-img{
+    position:absolute; inset:0;
+    background:linear-gradient(150deg,#2c2419,#171512 60%);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .proj-img::after{
+    content:"IMAGEN DE PROYECTO";
+    font-family:'Poppins',sans-serif; font-size:11px; letter-spacing:0.16em;
+    color:var(--gold); opacity:0.5;
+  }
+  .proj-info{
+    position:absolute; left:0; right:0; bottom:0; padding:24px;
+    background:linear-gradient(0deg, rgba(18,18,16,0.92) 30%, transparent 100%);
+  }
+  .proj-info .tag{font-size:11.5px; color:var(--gold-light); letter-spacing:0.1em; text-transform:uppercase; font-weight:600;}
+  .proj-info h3{font-size:20px; text-transform:none; letter-spacing:0; margin-top:6px; font-weight:700;}
+
+  /* ---------- ABOUT / TEAM ---------- */
+  .about{background:var(--paper-2);}
+  .about-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:70px; align-items:start;}
+  .about-quote{
+    font-family:'Poppins',sans-serif; font-weight:700; text-transform:none;
+    font-size:26px; line-height:1.4; letter-spacing:0; color:var(--ink);
+  }
+  .about-quote span{color:var(--gold);}
+  .team-list{display:flex; flex-direction:column; gap:0;}
+  .team-row{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:22px 0; border-bottom:1px solid var(--line);
+  }
+  .team-row:first-child{border-top:1px solid var(--line);}
+  .team-name{font-family:'Poppins',sans-serif; font-weight:700; font-size:16px;}
+  .team-role{font-size:13px; color:var(--gold); text-transform:uppercase; letter-spacing:0.06em; margin-top:4px;}
+  .team-years{font-family:'Poppins',sans-serif; font-weight:900; font-size:28px; color:var(--text-soft);}
+  .team-years small{font-family:'Work Sans',sans-serif; font-weight:500; font-size:11px; display:block; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-soft);}
+
+  /* ---------- CTA BAND ---------- */
+  .cta-band{
+    background:var(--gold); color:var(--ink); padding:70px 0;
+  }
+  .cta-inner{display:flex; justify-content:space-between; align-items:center; gap:30px; flex-wrap:wrap;}
+  .cta-inner h2{font-size:clamp(24px,3vw,34px); max-width:520px; color:var(--ink);}
+  .btn-dark{
+    background:var(--ink); color:var(--paper);
+    padding:14px 28px; font-size:14px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase;
+    border-radius:var(--radius); display:inline-flex; align-items:center; gap:10px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink); color:var(--text-soft-dark); padding:56px 0 26px; border-top:1px solid var(--line-dark);}
+  .foot-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:40px; padding-bottom:40px;}
+  .foot-col h4{
+    color:var(--paper); font-size:12.5px; text-transform:uppercase; letter-spacing:0.12em;
+    margin-bottom:16px; font-family:'Poppins',sans-serif; font-weight:700;
+  }
+  .foot-col p, .foot-col a{font-size:13.5px; line-height:2; color:var(--text-soft-dark); display:block;}
+  .foot-bottom{
+    display:flex; justify-content:space-between; padding-top:24px; border-top:1px solid var(--line-dark);
+    font-size:12px; color:#59564d; flex-wrap:wrap; gap:10px;
+  }
+
+  /* ---------- WHATSAPP FLOAT ---------- */
+  .wa-float{
+    position:fixed; bottom:26px; right:26px; z-index:60;
+    background:#25D366; color:#fff; width:56px; height:56px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 6px 20px rgba(0,0,0,0.35);
+  }
+
+  @media (max-width:860px){
+    nav ul{display:none;}
+    .about-grid{grid-template-columns:1fr;}
+    .project-grid{grid-template-columns:1fr;}
+    .project-grid .proj:first-child{grid-row:auto;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+
+  /* ---------- PAGE HERO (interior pages) ---------- */
+  .page-hero{
+    background:
+      linear-gradient(160deg, rgba(18,18,16,0.90) 20%, rgba(18,18,16,0.65) 100%),
+      repeating-linear-gradient(45deg, #23221e 0 2px, #1a1917 2px 46px);
+    background-size: cover, 60px 60px;
+    color:var(--paper); padding:74px 0 60px;
+  }
+  .page-hero h1{font-size:clamp(30px,4.4vw,52px); max-width:760px; color:var(--paper);}
+  .page-hero p{color:var(--text-soft-dark); font-size:16px; max-width:560px; margin-top:18px; line-height:1.6;}
+  .breadcrumb{font-size:12.5px; color:var(--text-soft-dark); letter-spacing:0.06em; margin-bottom:18px;}
+  .breadcrumb a{color:var(--gold-light);}
+
+  /* ---------- SERVICE GROUPS (servicios.html) ---------- */
+  .svc-group{padding:64px 0; border-bottom:1px solid var(--line);}
+  .svc-group:last-child{border-bottom:none;}
+  .svc-group-inner{display:grid; grid-template-columns:0.8fr 1.2fr; gap:56px;}
+  .svc-group-head .sec-label{margin-bottom:14px;}
+  .svc-group-head h2{font-size:clamp(24px,2.8vw,32px);}
+  .svc-group-head p{color:var(--text-soft); font-size:14.5px; margin-top:16px; line-height:1.7; max-width:340px;}
+  .svc-list{display:flex; flex-direction:column; gap:0;}
+  .svc-item{
+    display:flex; align-items:baseline; gap:16px; padding:16px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .svc-item:first-child{border-top:1px solid var(--line);}
+  .svc-item .dot{width:6px; height:6px; background:var(--gold); flex-shrink:0; border-radius:50%; margin-top:6px;}
+  .svc-item-text b{font-family:'Poppins',sans-serif; font-weight:700; font-size:15.5px; text-transform:none; display:block;}
+  .svc-item-text span{font-size:13.5px; color:var(--text-soft);}
+
+  /* ---------- PROJECT GALLERY (proyectos.html) ---------- */
+  .pill-row{display:flex; gap:10px; margin-bottom:44px; flex-wrap:wrap;}
+  .pill{
+    border:1.5px solid var(--line); padding:8px 18px; font-size:12.5px; letter-spacing:0.05em;
+    text-transform:uppercase; font-weight:600; color:var(--text-soft); border-radius:999px;
+  }
+  .pill.active{background:var(--ink); color:var(--paper); border-color:var(--ink);}
+  .gallery-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
+  }
+  .gcard{background:var(--paper-2);}
+  .gcard-img{
+    height:230px; position:relative; overflow:hidden;
+    background:linear-gradient(150deg,#e4dfd0,#cfc8b5 70%);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .gcard-img::after{content:"IMAGEN DE PROYECTO"; font-family:'Poppins',sans-serif; font-size:10.5px; letter-spacing:0.14em; color:#8a8266; opacity:0.7;}
+  .gcard-body{padding:20px;}
+  .gcard-tag{font-size:11.5px; color:var(--gold); text-transform:uppercase; letter-spacing:0.08em; font-weight:700;}
+  .gcard-body h3{font-size:16.5px; text-transform:none; letter-spacing:0; margin-top:8px; font-weight:700;}
+
+  /* ---------- MISSION / VISION (nosotros.html) ---------- */
+  .mv-grid{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line-dark); border:1px solid var(--line-dark);}
+  .mv-card{background:var(--ink); color:var(--paper); padding:44px 40px;}
+  .mv-card h3{color:var(--gold-light); font-size:22px; margin-bottom:20px;}
+  .mv-card ul{list-style:none; display:flex; flex-direction:column; gap:14px;}
+  .mv-card li{font-size:14.5px; color:var(--text-soft-dark); line-height:1.6; padding-left:18px; position:relative;}
+  .mv-card li::before{content:"—"; position:absolute; left:0; color:var(--gold);}
+
+  .founder-card{display:grid; grid-template-columns:120px 1fr; gap:26px; padding:36px 0; border-bottom:1px solid var(--line);}
+  .founder-card:first-child{border-top:1px solid var(--line);}
+  .founder-avatar{
+    width:120px; height:120px; background:var(--paper-2); border:1.5px solid var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Poppins',sans-serif; font-weight:900; font-size:30px; color:var(--gold);
+  }
+  .founder-name{font-family:'Poppins',sans-serif; font-weight:700; font-size:19px; text-transform:none; letter-spacing:0;}
+  .founder-role{font-size:12.5px; color:var(--gold); text-transform:uppercase; letter-spacing:0.08em; font-weight:700; margin:6px 0 14px;}
+  .founder-bio{font-size:14.5px; color:var(--text-soft); line-height:1.7; max-width:560px;}
+
+  /* ---------- CONTACT PAGE ---------- */
+  .contact-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px;}
+  .contact-card{
+    display:flex; gap:16px; padding:22px 0; border-bottom:1px solid var(--line); align-items:flex-start;
+  }
+  .contact-card:first-child{border-top:1px solid var(--line);}
+  .c-icon{
+    width:40px; height:40px; background:var(--ink); color:var(--gold-light); flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; font-size:16px;
+  }
+  .c-label{font-size:11.5px; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold); font-weight:700; margin-bottom:4px;}
+  .c-value{font-size:15px; font-weight:600;}
+  .c-value a{border-bottom:1px solid transparent;}
+  .c-value a:hover{border-color:var(--gold);}
+  .form-field{margin-bottom:18px;}
+  .form-field label{display:block; font-size:12.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-soft); margin-bottom:8px; font-weight:600;}
+  .form-field input, .form-field textarea{
+    width:100%; border:1.5px solid var(--line); background:var(--paper); padding:13px 14px;
+    font-family:'Work Sans',sans-serif; font-size:14.5px; color:var(--ink);
+  }
+  .form-field input:focus, .form-field textarea:focus{outline:none; border-color:var(--gold);}
+  .form-submit{
+    background:var(--ink); color:var(--paper); border:none; padding:14px 30px;
+    font-size:13.5px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; cursor:pointer;
+  }
+  .map-wrap{margin-top:60px; border:1px solid var(--line);}
+  .map-wrap iframe{width:100%; height:340px; display:block; border:0; filter:grayscale(0.3) contrast(1.05);}
+
+  /* ---------- FAQ ---------- */
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-item:first-child{border-top:1px solid var(--line);}
+  .faq-item summary{
+    list-style:none; cursor:pointer; padding:22px 0; display:flex; justify-content:space-between; align-items:center;
+    font-family:'Poppins',sans-serif; font-weight:700; font-size:15.5px; text-transform:none; letter-spacing:0;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+"; color:var(--gold); font-size:22px; font-weight:400;}
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item p{padding-bottom:22px; color:var(--text-soft); font-size:14.5px; line-height:1.7; max-width:640px;}
+
+  @media (max-width:860px){
+    .svc-group-inner, .mv-grid, .contact-grid, .founder-card{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:600px){
+    .gallery-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo-mark">
+      <div class="logo-box"><span>1</span><span>1</span><span>0</span><span>2</span></div>
+      <div class="logo-text">Corporativo<br><small>Arquitectura & Construcción</small></div>
+    </a>
+    <input type="checkbox" id="navCheck" class="nav-check">
+    <nav id="siteNav"><ul>
+      <li><a href="servicios.html" style="color:var(--gold-light);">Servicios</a></li>
+      <li><a href="proyectos.html">Proyectos</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul></nav>
+    <div class="nav-cta">
+      <a href="https://wa.me/526312701270" class="btn-gold">WhatsApp ↗</a>
+    </div>
+    <label class="nav-toggle" for="navCheck" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </label>
+  </div>
+</header>
+
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Inicio</a> / Servicios</div>
+    <div class="hero-eyebrow">Arquitectura & Construcción · Nogales, Sonora</div>
+    <h1>Servicios de arquitectura y construcción en Nogales, Sonora</h1>
+    <p>De la idea al plano y del plano a la obra terminada. Diseñamos y construimos proyectos residenciales, comerciales e industriales, y damos mantenimiento y remodelación a espacios ya existentes.</p>
+  </div>
+</section>
+
+<section class="svc-group">
+  <div class="wrap svc-group-inner">
+    <div class="svc-group-head">
+      <div class="sec-label">01 · Arquitectura</div>
+      <h2>Arquitectura y diseño</h2>
+      <p>Convertimos una idea en un proyecto ejecutivo completo, listo para construir y para tramitar permisos.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Diseño y planificación de proyectos arquitectónicos</b><span>Casas, comercios, oficinas y naves industriales en Nogales y Sonora.</span></div></div>
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Proyectos ejecutivos</b><span>Planos y especificaciones técnicas listas para construcción y permisos.</span></div></div>
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Diseño de interiores y espacios comerciales</b><span>Restaurantes, barberías, consultorios y oficinas con identidad propia.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="svc-group">
+  <div class="wrap svc-group-inner">
+    <div class="svc-group-head">
+      <div class="sec-label">02 · Construcción</div>
+      <h2>Construcción residencial, comercial e industrial</h2>
+      <p>Construcción llave en mano en Nogales y Sonora, con gerencia de obra y control de calidad en cada etapa.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Gerencia y supervisión de obra</b><span>Control de avance, calidad y tiempos de entrega.</span></div></div>
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Obra civil y estructural</b><span>Cimentación, estructura y construcción de casas, comercios y naves industriales.</span></div></div>
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Instalaciones eléctricas, mecánicas y de plomería</b><span>Integradas al proyecto desde el diseño.</span></div></div>
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Acabados de interiores y exteriores</b><span>Terminaciones de alta calidad para cada tipo de proyecto.</span></div></div>
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Mantenimiento y reparación de edificios</b><span>Para mantener tu inmueble en óptimas condiciones.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="svc-group">
+  <div class="wrap svc-group-inner">
+    <div class="svc-group-head">
+      <div class="sec-label">03 · Remodelación</div>
+      <h2>Remodelación y ampliación</h2>
+      <p>Renueva o amplía tu casa o negocio en Nogales sin empezar de cero — trabajamos sobre lo que ya existe.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Remodelación de interiores y exteriores</b><span>Cocinas, baños, fachadas y espacios comerciales.</span></div></div>
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Ampliación de casa habitación</b><span>Recámaras, plantas altas y nuevos espacios funcionales.</span></div></div>
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Remodelación comercial</b><span>Locales, oficinas y restaurantes con mínima interrupción del negocio.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="svc-group">
+  <div class="wrap svc-group-inner">
+    <div class="svc-group-head">
+      <div class="sec-label">04 · Exteriores</div>
+      <h2>Exteriores y acabados</h2>
+      <p>Los detalles que transforman un patio o fachada — instalación de pasto sintético y cerco de malla ciclónica en Nogales incluidos.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Terrazas y áreas de asador</b><span>Espacios exteriores a la medida para convivir en casa.</span></div></div>
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Piedra decorativa</b><span>Para fachadas, patios y muros con acabado natural.</span></div></div>
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Pasto sintético</b><span>Venta e instalación de pasto sintético en Nogales para casas y negocios.</span></div></div>
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Cerco de malla ciclónica</b><span>Instalación de cercos perimetrales para vivienda, comercio y bodegas.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="svc-group">
+  <div class="wrap svc-group-inner">
+    <div class="svc-group-head">
+      <div class="sec-label">05 · Consultoría</div>
+      <h2>Consultoría técnica</h2>
+      <p>Acompañamiento antes, durante y después de construir.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Selección de materiales y sistemas constructivos</b><span>Asesoría según presupuesto y objetivos.</span></div></div>
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Evaluación de costos y presupuestos</b><span>Estimaciones claras antes de comenzar.</span></div></div>
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Permisos y licencias</b><span>Asesoramiento en trámites ante autoridades locales.</span></div></div>
+      <div class="svc-item"><div class="dot"></div><div class="svc-item-text"><b>Sostenibilidad y eficiencia energética</b><span>Evaluación de opciones más eficientes para tu proyecto.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap cta-inner">
+    <h2>¿No ves tu proyecto en la lista? Seguro también lo hacemos.</h2>
+    <a href="contacto.html" class="btn-dark">Escríbenos ↗</a>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <h4>Corporativo 1102</h4>
+        <p style="max-width:280px;">Despacho de arquitectura y construcción residencial, comercial e industrial en Nogales, Sonora.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <a href="https://wa.me/526312701270">631 270 1270</a>
+        <a href="mailto:gabriel@corporativo1102.mx">gabriel@corporativo1102.mx</a>
+        <a href="mailto:carlos@corporativo1102.mx">carlos@corporativo1102.mx</a>
+        <a href="https://www.facebook.com/corporativo1102/" target="_blank">Facebook ↗</a>
+        <a href="https://www.instagram.com/corporativo1102" target="_blank">Instagram ↗</a>
+      </div>
+      <div class="foot-col">
+        <h4>Navegación</h4>
+        <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="foot-col">
+        <h4>Ubicación</h4>
+        <p>Obregón 1102<br>Nogales, Sonora</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Corporativo 1102. Todos los derechos reservados.</span>
+      <span>Nogales, Sonora, México</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/526312701270" class="wa-float" aria-label="WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.51 2 12.05 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.26-8.24 2.2 0 4.27.86 5.83 2.42a8.17 8.17 0 0 1 2.42 5.83c0 4.55-3.7 8.24-8.25 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.73 2.65 4.2 3.71.59.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
+</a>
+
+<script>
+  (function(){
+    var navCheck = document.getElementById('navCheck');
+    var siteNav = document.getElementById('siteNav');
+    if(navCheck && siteNav){
+      siteNav.querySelectorAll('a').forEach(function(link){
+        link.addEventListener('click', function(){
+          navCheck.checked = false;
+        });
+      });
+    }
+  })();
+</script>
+</body>
+</html>
