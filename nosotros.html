@@ -104,10 +104,10 @@
     #siteNav{
       position:absolute; top:100%; left:0; right:0;
       background:var(--ink-2); border-bottom:1px solid var(--line-dark);
-      max-height:0; overflow:hidden; transition:max-height .25s ease;
+      max-height:0; overflow:hidden;
     }
     .nav-check:checked ~ #siteNav{max-height:320px;}
-    #siteNav ul{flex-direction:column; gap:0; padding:8px 0;}
+    #siteNav ul{display:flex; flex-direction:column; gap:0; padding:8px 0;}
     #siteNav ul li{width:100%;}
     #siteNav ul li a{display:block; padding:14px 32px;}
     .nav-cta{display:none;}
@@ -455,29 +455,36 @@
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="sec-label">Equipo</div>
-        <h2>Cofundadores</h2>
+        <div class="sec-label">Estructura</div>
+        <h2>Cómo trabajamos</h2>
       </div>
-      <p>Un equipo experimentado en proyectos residenciales, comerciales, públicos e industriales.</p>
+      <p>Dos direcciones especializadas trabajando de forma integrada en cada proyecto.</p>
     </div>
-    <div>
-      <div class="founder-card">
-        <div class="founder-avatar">GH</div>
-        <div>
-          <div class="founder-name">Arq. Gabriel Hermosillo Heredia</div>
-          <div class="founder-role">Arquitecto · Cofundador · 13 años de experiencia</div>
-          <div class="founder-bio">Egresado de la Universidad de Tijuana. Cofundador de Corporativo 1102 desde 2021, con enfoque en diseño y planificación de proyectos residenciales, comerciales y públicos. Antes fue cofundador de Taller 1102 (2016–2020) y arquitecto docente en la Universidad Durango Santander. Dominio de AutoCAD, Revit, SketchUp y paquetería de Office.</div>
-        </div>
+    <div class="mv-grid">
+      <div class="mv-card bracket">
+        <h3>Dirección de Arquitectura</h3>
+        <ul>
+          <li>Diseño arquitectónico</li>
+          <li>Proyecto ejecutivo</li>
+          <li>Planeación de espacios</li>
+          <li>Modelado y visualización</li>
+          <li>Coordinación interdisciplinaria</li>
+        </ul>
+        <p style="margin-top:20px; font-style:italic; color:var(--gold-light); font-size:14.5px; line-height:1.6;">"Convertimos ideas en proyectos funcionales, estéticos y técnicamente viables."</p>
       </div>
-      <div class="founder-card">
-        <div class="founder-avatar">CC</div>
-        <div>
-          <div class="founder-name">Ing. Carlos Carranza Mendoza</div>
-          <div class="founder-role">Ingeniero Civil · Cofundador · 11 años de experiencia</div>
-          <div class="founder-bio">Egresado del Instituto Tecnológico de Nogales. Cofundador de Corporativo 1102 desde 2021, especializado en diseño y supervisión de proyectos industriales como plantas de manufactura, almacenes y edificios de oficinas. Previamente en CMS Construcciones y Servicios (2013–2021). Dominio de AutoCAD, Revit, SketchUp, OPUS y paquetería de Office.</div>
-        </div>
+      <div class="mv-card bracket">
+        <h3>Dirección de Construcción</h3>
+        <ul>
+          <li>Planeación y ejecución de obra</li>
+          <li>Supervisión</li>
+          <li>Administración de proyectos</li>
+          <li>Control de costos y tiempos</li>
+          <li>Calidad constructiva y cumplimiento</li>
+        </ul>
+        <p style="margin-top:20px; font-style:italic; color:var(--gold-light); font-size:14.5px; line-height:1.6;">"Ejecutamos cada proyecto con control, calidad y compromiso desde la planeación hasta la entrega."</p>
       </div>
     </div>
+    <p class="about-quote" style="margin-top:48px; text-align:center; max-width:760px; margin-left:auto; margin-right:auto;">Corporativo 1102 integra arquitectura, ingeniería y construcción para ofrecer soluciones completas, optimizando tiempos, costos y calidad en cada proyecto.</p>
   </div>
 </section>
 
