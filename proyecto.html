@@ -73,10 +73,10 @@
     #siteNav{
       position:absolute; top:100%; left:0; right:0;
       background:var(--ink-2); border-bottom:1px solid var(--line-dark);
-      max-height:0; overflow:hidden; transition:max-height .25s ease;
+      max-height:0; overflow:hidden;
     }
     .nav-check:checked ~ #siteNav{max-height:320px;}
-    #siteNav ul{flex-direction:column; gap:0; padding:8px 0;}
+    #siteNav ul{display:flex; flex-direction:column; gap:0; padding:8px 0;}
     #siteNav ul li{width:100%;}
     #siteNav ul li a{display:block; padding:14px 32px;}
     .nav-cta{display:none;}
