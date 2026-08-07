@@ -279,6 +279,12 @@
       document.title = proyecto.nombre + ' | Corporativo 1102';
       document.getElementById('pageTitle').textContent = proyecto.nombre + ' | Corporativo 1102';
       document.getElementById('pageDescription').setAttribute('content', proyecto.descripcion);
+      // Canonical dinámico: URL limpia del proyecto, sin parámetros de tracking (utm, fbclid, etc.)
+      var canonicalHref = window.location.origin + window.location.pathname + '?id=' + encodeURIComponent(proyecto.id);
+      var linkCanonical = document.createElement('link');
+      linkCanonical.setAttribute('rel', 'canonical');
+      linkCanonical.setAttribute('href', canonicalHref);
+      document.head.appendChild(linkCanonical);
       document.getElementById('breadcrumbActual').textContent = proyecto.nombre;
       document.getElementById('categoriaTag').textContent = proyecto.categoria;
       document.getElementById('nombreProyecto').textContent = proyecto.nombre;
