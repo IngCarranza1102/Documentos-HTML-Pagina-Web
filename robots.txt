@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://corporativo1102.mx/sitemap.xml
