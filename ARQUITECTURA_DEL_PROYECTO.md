@@ -249,12 +249,16 @@ Ya implementado en las 6 páginas principales:
 - robots.txt.
 - Favicon.
 
+Ya implementado en index.html y contacto.html:
+
+- Datos estructurados JSON-LD (GeneralContractor), con el mismo @id (https://corporativo1102.mx/#organization) en ambas páginas.
+
 Actividad externa (fuera del repositorio):
 
 - Google Search Console verificado para corporativo1102.mx.
 - sitemap.xml enviado desde Search Console.
 
-Pendiente: JSON-LD y otras optimizaciones avanzadas — ver "Pendientes posteriores al SEO básico".
+Pendiente: FAQPage (prioridad baja) y demás optimizaciones avanzadas — ver "Pendientes posteriores al SEO básico".
 
 ---
 
@@ -275,8 +279,9 @@ Mantener siempre un sitio:
 
 SEO avanzado / JSON-LD:
 
-- Datos estructurados Organization/LocalBusiness.
-- Datos estructurados FAQPage en contacto.html.
+- Datos estructurados Organization/LocalBusiness: resuelto mediante GeneralContractor en index.html y contacto.html.
+- Datos estructurados FAQPage en contacto.html: pendiente, prioridad baja (sin beneficio visible esperado en SERP para este tipo de sitio).
+- Logo dedicado para Schema (propiedad logo): pendiente como mejora futura, no bloqueante.
 
 Rendimiento:
 
