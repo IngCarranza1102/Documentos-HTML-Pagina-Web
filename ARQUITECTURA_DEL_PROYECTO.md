@@ -225,9 +225,9 @@ Archivo:
 contacto.html
 
 Estado:
-Parcialmente completada.
+Finalizada.
 
-Nota: la página ya es funcional (datos de contacto, formulario, mapa embebido y preguntas frecuentes). Quedan pendientes mejoras puntuales de accesibilidad y el cierre del formulario — ver "Pendientes posteriores al SEO básico".
+Nota: la página es funcional (datos de contacto, formulario, mapa embebido y preguntas frecuentes) y la accesibilidad del formulario y del mapa ya quedó corregida (for/id en los campos, title en el iframe). La página de confirmación personalizada se pospone como mejora opcional, ya que requiere el plan Personal de pago de Formspree (Custom Redirect) — ver "Nuevas funcionalidades opcionales".
 
 ---
 
@@ -273,12 +273,6 @@ Mantener siempre un sitio:
 
 # Pendientes posteriores al SEO básico
 
-Accesibilidad y cierre de Contacto:
-
-- Vincular labels e inputs del formulario (for/id).
-- Agregar title al iframe del mapa.
-- Página de confirmación propia tras el envío del formulario.
-
 SEO avanzado / JSON-LD:
 
 - Datos estructurados Organization/LocalBusiness.
@@ -294,6 +288,7 @@ Revisión responsive final:
 
 Nuevas funcionalidades opcionales:
 
+- Página de confirmación propia tras el envío del formulario de contacto (requiere Custom Redirect, disponible en el plan Personal de pago de Formspree; por ahora se mantiene el plan gratuito y la confirmación estándar).
 - A definir según prioridad del usuario.
 
 Nota: Google Business Profile no se ha confirmado como realizado — no se documenta como completado hasta confirmación explícita.
