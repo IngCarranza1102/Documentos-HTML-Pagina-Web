@@ -27,7 +27,7 @@ const proyectosData = [
     nombre: "Proyecto Trébol Colosio",
     categoria: "Comercial",
     descripcion: "Diseño, proyecto arquitectónico, tramitología de permisos ante gobierno y construcción de Autoservicio El Trébol.",
-    portada: "images/proyectos/Trebol Colosio/Trebol Colosio 1.png",
+    portada: "images/proyectos/Trebol Colosio/Trebol Colosio 1.jpg",
     galeria: [
       "images/proyectos/Trebol Colosio/Trebol Colosio 2.jpeg",
       "images/proyectos/Trebol Colosio/Trebol Colosio 3.jpeg",
@@ -41,12 +41,12 @@ const proyectosData = [
     descripcion: "Proyecto arquitectónico de Barbería Hernández.",
     portada: "images/proyectos/Barberia Hernandez/Barberia Hernandez 3.jpg",
     galeria: [
-      "images/proyectos/Barberia Hernandez/Barberia Hernandez 1.png",
-      "images/proyectos/Barberia Hernandez/Barberia Hernandez 2.png",
+      "images/proyectos/Barberia Hernandez/Barberia Hernandez 1.jpg",
+      "images/proyectos/Barberia Hernandez/Barberia Hernandez 2.jpg",
       "images/proyectos/Barberia Hernandez/Barberia Hernandez 4.jpg",
       "images/proyectos/Barberia Hernandez/Barberia Hernandez 5.jpg",
       "images/proyectos/Barberia Hernandez/Barberia Hernandez 6.jpg",
-      "images/proyectos/Barberia Hernandez/Barberia Hernandez 7.png",
+      "images/proyectos/Barberia Hernandez/Barberia Hernandez 7.jpg",
       "images/proyectos/Barberia Hernandez/Barberia Hernandez 8.jpg"
     ]
   },
@@ -105,12 +105,12 @@ const proyectosData = [
     nombre: "Proyecto KT",
     categoria: "Residencial",
     descripcion: "Proyecto arquitectónico y construcción de fachada y sala comedor.",
-    portada: "images/proyectos/Proyecto KT/Proyecto KT 5.png",
+    portada: "images/proyectos/Proyecto KT/Proyecto KT 5.jpg",
     galeria: [
       "images/proyectos/Proyecto KT/Proyecto KT 1.jpeg",
       "images/proyectos/Proyecto KT/Proyecto KT 2.jpeg",
       "images/proyectos/Proyecto KT/Proyecto KT 3.jpeg",
-      "images/proyectos/Proyecto KT/Proyecto KT 4.png"
+      "images/proyectos/Proyecto KT/Proyecto KT 4.jpg"
     ]
   },
   {
