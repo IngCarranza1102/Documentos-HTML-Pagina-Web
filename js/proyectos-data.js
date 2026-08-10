@@ -129,10 +129,10 @@ const proyectosData = [
     nombre: "Diseño de Oficina",
     categoria: "Residencial",
     descripcion: "Diseño de oficina para trabajo y cuarto gamer.",
-    portada: "images/proyectos/Diseño Oficina/Diseño Oficina 1.png",
+    portada: "images/proyectos/Diseño Oficina/Diseño Oficina 1.jpg",
     galeria: [
-      "images/proyectos/Diseño Oficina/Diseño Oficina 2.png",
-      "images/proyectos/Diseño Oficina/Diseño Oficina 3.png"
+      "images/proyectos/Diseño Oficina/Diseño Oficina 2.jpg",
+      "images/proyectos/Diseño Oficina/Diseño Oficina 3.jpg"
     ]
   },
   {
