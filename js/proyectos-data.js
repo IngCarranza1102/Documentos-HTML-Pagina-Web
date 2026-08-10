@@ -140,10 +140,10 @@ const proyectosData = [
     nombre: "Diseño de Patio Trasero",
     categoria: "Residencial",
     descripcion: "Diseño de patio trasero enfocado en los niños, con canasta de basketball, aprovechando el desnivel del terreno para colocar un tobogán.",
-    portada: "images/proyectos/Diseño Patio/Patio 1.png",
+    portada: "images/proyectos/Diseño Patio/Patio 1.jpg",
     galeria: [
-      "images/proyectos/Diseño Patio/Patio 2.png",
-      "images/proyectos/Diseño Patio/Patio 3.png"
+      "images/proyectos/Diseño Patio/Patio 2.jpg",
+      "images/proyectos/Diseño Patio/Patio 3.jpg"
     ]
   },
   {
