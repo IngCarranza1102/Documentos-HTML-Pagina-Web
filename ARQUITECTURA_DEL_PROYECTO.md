@@ -86,7 +86,7 @@ No duplicar información en otros archivos.
 
 # Imágenes
 
-Todas las imágenes se encuentran en:
+Todas las imágenes de proyectos se encuentran en:
 
 images/proyectos/
 
@@ -104,7 +104,20 @@ portada.*
 
 ...
 
-No utilizar imágenes Base64 para proyectos.
+No utilizar imágenes Base64 para proyectos. El formato de cada imagen (JPG, PNG, etc.)
+debe elegirse según el contenido y si requiere transparencia real, no de forma arbitraria.
+
+Estado de optimización: Finalizada. Las imágenes de images/proyectos/ están actualmente
+en formatos web optimizados; no quedan casos de alto impacto pendientes.
+
+Logos de clientes (trust bar):
+
+images/marca/clientes/
+
+Ahí se encuentran los logos externos utilizados por la sección de confianza ("Han
+confiado en Corporativo 1102" / "Empresas que confían en nosotros"). Anteriormente
+estaban embebidos como Base64 directamente en index.html y nosotros.html; se eliminó
+ese uso y ahora son archivos externos en esta ruta.
 
 ---
 
@@ -262,6 +275,37 @@ Pendiente: FAQPage (prioridad baja) y demás optimizaciones avanzadas — ver "P
 
 ---
 
+Etapa 8
+
+Consolidación de CSS compartido.
+
+Archivo:
+
+css/styles.css
+
+Estado:
+Finalizada.
+
+Nota: se extrajeron a css/styles.css únicamente los estilos globales universales,
+idénticos en las 6 páginas principales:
+
+- :root (variables)
+- reset/base (*, body, h1-h3/.display, a, .wrap)
+- header/nav (incluye su comportamiento responsive)
+- footer
+- WhatsApp flotante
+
+Las 6 páginas principales (index.html, nosotros.html, servicios.html, proyectos.html,
+proyecto.html, contacto.html) utilizan ahora:
+
+<link rel="stylesheet" href="css/styles.css">
+
+El CSS específico de cada página permanece inline en su propio <style>. La migración
+se realizó página por página, con diagnóstico, autorización y validación visual
+individual antes de continuar con la siguiente.
+
+---
+
 # Filosofía
 
 Mantener siempre un sitio:
@@ -285,11 +329,21 @@ SEO avanzado / JSON-LD:
 
 Rendimiento:
 
-- Auditoría de imágenes, fuentes y carga en todo el sitio.
+Completado:
+
+- Optimización de imágenes de proyectos (images/proyectos/).
+- Eliminación de Base64 embebido (index.html, nosotros.html).
+- Consolidación de CSS compartido (ver Etapa 8).
+
+Pendiente (prioridad baja):
+
+- preconnect a fonts.gstatic.com.
 
 Revisión responsive final:
 
-- Confirmar que index.html, servicios.html, proyectos.html y proyecto.html no tengan pendientes de diseño responsive no reportados.
+Completada. Las 6 páginas principales fueron revisadas: escritorio validado mediante
+pruebas locales, y móvil verificado manualmente a 390px. Sin pendientes de diseño
+responsive reportados.
 
 Nuevas funcionalidades opcionales:
 
