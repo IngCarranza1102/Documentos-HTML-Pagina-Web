@@ -334,10 +334,13 @@ Completado:
 - Optimización de imágenes de proyectos (images/proyectos/).
 - Eliminación de Base64 embebido (index.html, nosotros.html).
 - Consolidación de CSS compartido (ver Etapa 8).
-
-Pendiente (prioridad baja):
-
-- preconnect a fonts.gstatic.com.
+- Preconnect a Google Fonts: las 6 páginas principales (index.html, nosotros.html,
+  servicios.html, proyectos.html, proyecto.html, contacto.html) cargan ahora
+  <link rel="preconnect" href="https://fonts.googleapis.com"> seguido de
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>, antes del
+  stylesheet de Google Fonts. Poppins y Work Sans continúan cargando correctamente.
+  Implementación validada técnicamente (renderizado, consola sin errores, carga
+  confirmada de fonts.googleapis.com y fonts.gstatic.com, tipografías aplicadas).
 
 Revisión responsive final:
 
