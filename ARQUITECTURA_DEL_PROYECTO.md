@@ -270,6 +270,19 @@ Actividad externa (fuera del repositorio):
 
 - Google Search Console verificado para corporativo1102.mx.
 - sitemap.xml enviado desde Search Console.
+- Google Business Profile (Perfil de Negocio de Google) de Corporativo 1102 creado y
+  verificado, públicamente visible. Configurado como empresa de área de servicio, sin
+  dirección física pública. Áreas de servicio configuradas: Nogales, Sonora; Ímuris,
+  Sonora; Magdalena de Kino, Sonora; Santa Ana, Sonora. Datos públicos configurados:
+  categoría principal de construcción, categorías adicionales relacionadas con las
+  actividades reales de la empresa, teléfono, sitio web oficial, horario, Facebook e
+  Instagram, servicios, logo, fotografías y publicación inicial. Se realizó una
+  auditoría pública en Google Search y Google Maps, que confirmó que el Perfil de
+  Negocio aparece públicamente en Google Maps; durante esa auditoría,
+  corporativo1102.mx apareció como primer resultado orgánico al buscar "Corporativo
+  1102" (observación puntual de ese momento, no una posición garantizada de forma
+  permanente). También durante esa auditoría se registraron 5 reseñas con calificación
+  5.0, todas respondidas individualmente.
 
 Pendiente: FAQPage (prioridad baja) y demás optimizaciones avanzadas — ver "Pendientes posteriores al SEO básico".
 
@@ -352,5 +365,3 @@ Nuevas funcionalidades opcionales:
 
 - Página de confirmación propia tras el envío del formulario de contacto (requiere Custom Redirect, disponible en el plan Personal de pago de Formspree; por ahora se mantiene el plan gratuito y la confirmación estándar).
 - A definir según prioridad del usuario.
-
-Nota: Google Business Profile no se ha confirmado como realizado — no se documenta como completado hasta confirmación explícita.
