@@ -2,7 +2,7 @@
 
 ## Checkpoint
 - Rama: main
-- Último commit publicado: d314ce8
+- Base de reanudación: c40097c
 - Estado Git: main = origin/main
 - Trabajo local pendiente: nosotros.html modificado, no staged
 
