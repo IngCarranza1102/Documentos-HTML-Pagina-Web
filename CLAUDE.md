@@ -101,6 +101,44 @@ escribirla.
 - No usar force push.
 - No sobrescribir cambios locales existentes.
 
+## Economía de contexto y reanudación
+
+- Aplicar siempre el principio de lectura mínima suficiente: para una tarea puntual, leer
+  únicamente los archivos o fragmentos necesarios.
+- Si basta con grep, una búsqueda o una lectura parcial, no leer un archivo completo.
+- No repetir auditorías o investigaciones ya registradas en `ESTADO_PROYECTO.md`, salvo que
+  Git o el código actual indiquen que pueden estar desactualizadas.
+- `ESTADO_PROYECTO.md` es el checkpoint operativo para reanudar sesiones.
+
+Al iniciar una sesión nueva:
+1. Leer `CLAUDE.md`.
+2. Leer `ESTADO_PROYECTO.md` si existe.
+3. Verificar el estado real con Git.
+4. Si Git contradice el checkpoint, prevalece Git y debe reportarse la discrepancia.
+5. Consultar `ARQUITECTURA_DEL_PROYECTO.md` únicamente si la tarea requiere información
+   estructural que no esté en el checkpoint.
+
+- No auditar el repositorio completo como rutina de inicio.
+- No releer `ARQUITECTURA_DEL_PROYECTO.md` completo en cada sesión.
+- No repetir explicaciones extensas ya establecidas en la misma sesión.
+- La profundidad de validación debe ser proporcional al riesgo: cambios triviales de texto
+  requieren validación mínima; cambios visuales/responsive requieren la validación visual
+  correspondiente; cambios funcionales o estructurales requieren validación más profunda.
+- No instalar herramientas o dependencias únicamente para una validación trivial si existe
+  un método seguro más simple.
+- Cuando la tarea solicitada termine, detenerse; no ampliar el alcance automáticamente.
+- El ahorro de contexto **nunca** elimina las reglas existentes de autorización, seguridad
+  Git, cambios mínimos, diff antes del commit ni aprobación antes de commit/push.
+
+### Checkpoint (ESTADO_PROYECTO.md)
+
+- Debe mantenerse compacto: objetivo habitual 20–35 líneas, máximo 50.
+- Debe representar el estado ACTUAL, no acumular historial.
+- Actualizarlo solo cuando exista una razón operativa: cierre de una etapa, decisión
+  importante que afecte trabajo futuro, sesión larga que termina con trabajo pendiente,
+  cambio de área importante del proyecto, o trabajo sin commit que deba recuperarse después.
+- No actualizarlo después de cada microcambio.
+
 ## Rol de Claude Code en este proyecto
 
 Claude Code actúa como **implementador técnico controlado**, no como agente autónomo con
