@@ -2,9 +2,9 @@
 
 ## Checkpoint
 - Rama: main
-- Base de reanudación: c40097c
+- Base de reanudación: 12926d7
 - Estado Git: main = origin/main
-- Trabajo local pendiente: nosotros.html modificado, no staged
+- Trabajo local pendiente: ninguno (working tree limpio)
 
 ## Etapa activa
 Corrección de ubicación pública y horario para mantener consistencia con Google Business Profile.
@@ -22,13 +22,17 @@ Corrección de ubicación pública y horario para mantener consistencia con Goog
 - @id existente del schema no se modifica.
 
 ## Trabajo realizado en la etapa
-- nosotros.html: footer actualizado de "Obregón 1102 / Nogales, Sonora" a "Nogales, Sonora".
+- nosotros.html: footer actualizado de "Obregón 1102 / Nogales, Sonora" a "Nogales, Sonora". Commiteado y publicado (commit 12926d7).
 - Validación de escritorio: OK.
 - Validación móvil real no fue posible por limitación de la herramienta; revisión del CSS responsive no detectó riesgo derivado de este cambio.
-- Cambio todavía sin staging ni commit.
+
+## Trabajo pendiente en la etapa
+- JSON-LD desactualizado en index.html y contacto.html: streetAddress y postalCode aún presentes; areaServed solo indica "Nogales, Sonora" (faltan las 4 áreas); openingHoursSpecification no refleja L-S 08:00–19:00.
+- Texto visible "Obregón 1102" pendiente de retirar en: index.html, contacto.html, servicios.html, proyectos.html, proyecto.html.
+- contacto.html: iframe de Google Maps referencia "Obregón 1102" en title y query.
 
 ## Próxima acción exacta
-Revisar el diff pendiente de nosotros.html y continuar el flujo autorizado desde ese punto. No modificar otro archivo sin autorización.
+Corregir el JSON-LD de index.html (quitar streetAddress y postalCode, actualizar areaServed y openingHoursSpecification según las decisiones vigentes) como siguiente archivo único de la etapa. No modificar otro archivo sin autorización.
 
 ## No volver a investigar
 - La decisión de retirar Obregón 1102 ya está confirmada.
