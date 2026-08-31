@@ -2,40 +2,31 @@
 
 ## Checkpoint
 - Rama: main
-- Base de reanudación: 12926d7
+- Base de reanudación: 8262982
 - Estado Git: main = origin/main
 - Trabajo local pendiente: ninguno (working tree limpio)
 
-## Etapa activa
-Corrección de ubicación pública y horario para mantener consistencia con Google Business Profile.
+## Última etapa cerrada
+Corrección de ubicación pública y horario para consistencia con Google Business Profile — CERRADA Y VERIFICADA.
+- Archivos corregidos y publicados: index.html, contacto.html, nosotros.html, servicios.html, proyectos.html, proyecto.html.
+- Sin referencias públicas residuales a "Obregón 1102" ni al código postal antiguo (verificado globalmente).
+- Todos los footers muestran únicamente "Nogales, Sonora".
+- JSON-LD de index.html y contacto.html: sin streetAddress ni postalCode; areaServed = Nogales, Ímuris, Magdalena de Kino y Santa Ana, Sonora; horario L-S 08:00–19:00; domingo omitido (cerrado); @id sin cambios.
+- contacto.html: tarjeta visible, título e iframe de Google Maps apuntan únicamente a Nogales, Sonora.
 
-## Decisiones vigentes
-- Corporativo 1102 funciona públicamente como empresa de área de servicio.
-- No publicar Obregón 1102 como dirección actual.
-- No publicar ninguna dirección residencial sustituta.
+## Decisiones vigentes (aplican a trabajo futuro relacionado)
+- No publicar dirección física ni residencial de la empresa.
 - Ubicación pública general: Nogales, Sonora.
 - Áreas de servicio: Nogales, Ímuris, Magdalena de Kino y Santa Ana, Sonora.
 - Horario: lunes a sábado 08:00–19:00; domingo cerrado.
-- El mapa de contacto se conservará centrado genéricamente en Nogales, Sonora.
-- JSON-LD conservará PostalAddress solo con localidad/región/país, sin streetAddress ni postalCode.
-- areaServed deberá reflejar las cuatro áreas confirmadas.
-- @id existente del schema no se modifica.
-
-## Trabajo realizado en la etapa
-- nosotros.html: footer actualizado de "Obregón 1102 / Nogales, Sonora" a "Nogales, Sonora". Commiteado y publicado (commit 12926d7).
-- Validación de escritorio: OK.
-- Validación móvil real no fue posible por limitación de la herramienta; revisión del CSS responsive no detectó riesgo derivado de este cambio.
-
-## Trabajo pendiente en la etapa
-- JSON-LD desactualizado en index.html y contacto.html: streetAddress y postalCode aún presentes; areaServed solo indica "Nogales, Sonora" (faltan las 4 áreas); openingHoursSpecification no refleja L-S 08:00–19:00.
-- Texto visible "Obregón 1102" pendiente de retirar en: index.html, contacto.html, servicios.html, proyectos.html, proyecto.html.
-- contacto.html: iframe de Google Maps referencia "Obregón 1102" en title y query.
+- PostalAddress en JSON-LD: solo localidad/región/país, sin streetAddress ni postalCode.
+- @id del schema (https://corporativo1102.mx/#organization) no se modifica.
 
 ## Próxima acción exacta
-Corregir el JSON-LD de index.html (quitar streetAddress y postalCode, actualizar areaServed y openingHoursSpecification según las decisiones vigentes) como siguiente archivo único de la etapa. No modificar otro archivo sin autorización.
+Ninguna pendiente de esta etapa. Definir siguiente etapa/tarea a solicitud del usuario.
 
 ## No volver a investigar
-- La decisión de retirar Obregón 1102 ya está confirmada.
+- La decisión de retirar Obregón 1102 ya está confirmada y aplicada en todo el sitio.
 - La configuración de Google Business Profile ya fue auditada y documentada.
-- No repetir auditoría global del sitio para continuar esta etapa.
+- La verificación global de esta etapa (JSON-LD, footers, mapa) ya se hizo — no repetirla salvo cambios nuevos en estos archivos.
 - Consultar ARQUITECTURA_DEL_PROYECTO.md solo si una tarea requiere información estructural no contenida aquí.
